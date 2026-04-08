@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Sederhana</title>
+    <link rel="icon" type="image/png" href="doggypink.jpg" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<form action="action_page.php" method="get" target="_self">
+
+    <label for="depan">Nama depan:</label><br>
+    <input type="text" id="depan" name="nama_depan" value="Bintang"><br><br>
+
+    <label for="belakang">Nama belakang:</label><br>
+    <input type="text" id="belakang" name="nama_belakang" value="Nuraini"><br><br>
+
+    <input type="submit" value="Kirim">
+    <input type="reset" value="Reset">
+
+</form>
+
+<p>
+Jika Anda mengklik tombol "Kirim", data formulir akan dikirim ke halaman bernama 
+<code>action_page.php</code>.
+</p>
+
+<p>
+Kesimpulan: 
+Tombol reset akan mengembalikan input ke nilai awal. 
+Tombol kirim akan mengirim data ke server sesuai atribut action. 
+Atribut method menentukan cara pengiriman data (GET atau POST), 
+dan target menentukan di mana hasil ditampilkan (_self, _blank, dll).
+</p>
+
+</body>
+</html>
