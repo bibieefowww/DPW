@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coba_input</title>
+</head>
+<body>
+
+    <label for="nama">Input Text</label><br>
+    <input type="text" id="nama" name="nama"><br><br>
+
+    <label for="password">Input Password</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <hr>
+
+    <h3>Uji coba 2</h3>
+
+    <input type="radio" id="html" name="bahasa" value="HTML">
+    <label for="html">HTML</label><br>
+
+    <input type="radio" id="css" name="bahasa" value="CSS">
+    <label for="css">CSS</label><br>
+
+    <input type="radio" id="javascript" name="bahasa" value="JavaScript">
+    <label for="javascript">JavaScript</label>
+
+    <p>
+        Kesimpulan: Jika atribut name pada radio button sama, maka hanya satu pilihan yang bisa dipilih.
+        Jika atribut name berbeda, maka semua pilihan dapat dipilih secara bersamaan.
+    </p>
+
+</body>
+</html>
+
+<hr>
+
+<h3>Uji coba 3</h3>
+
+<input type="checkbox" id="id1" name="kendaraan" value="Bike">
+<label for="id1">I have a bike</label><br>
+
+<input type="checkbox" id="id2" name="kendaraan" value="Car">
+<label for="id2">I have a car</label><br>
+
+<input type="checkbox" id="id3" name="kendaraan" value="Boat">
+<label for="id3">I have a boat</label>
+
+<p>
+Kesimpulan: Checkbox memungkinkan pengguna memilih lebih dari satu pilihan.
+Baik menggunakan atribut name yang sama maupun berbeda, semua opsi tetap bisa dipilih.
+</p>
+
+<hr>
+
+<h3>Uji coba 4</h3>
+
+<label for="favcolor">Pilih warna dengan type="color":</label><br>
+<input type="color" id="favcolor" name="favcolor"><br><br>
+
+<label for="tanggal">Pilih tanggal dengan type="date":</label><br>
+<input type="date" id="tanggal" name="tanggal"><br><br>
+
+<input type="button" onclick="alert('Hello World!')" value="Click Me!"><br>
+
+<p>
+Kesimpulan: Input type color menampilkan pemilih warna, type date menampilkan kalender.
+Tombol button dapat menjalankan perintah JavaScript saat diklik.
+</p>
+
+<hr>
+
+<h3>Uji coba 5</h3>
+
+<label for="birthdaytime">Input dengan type datetime-local:</label><br>
+<input type="datetime-local" id="birthdaytime" name="birthdaytime"><br><br>
+
+<label for="bdaymonth">Input dengan type month:</label><br>
+<input type="month" id="bdaymonth" name="bdaymonth"><br><br>
+
+<label for="email">Enter your email:</label><br>
+<input type="email" id="email" name="email"><br>
+
+<p>
+Kesimpulan: Beberapa tipe input seperti datetime-local, month, dan email memiliki dukungan berbeda di setiap browser.
+Sebagian browser menampilkan UI khusus, sementara lainnya hanya berupa input biasa dengan validasi.
+</p>
+
+<hr>
+
+<h3>Uji coba 6</h3>
+
+<input type="image" src="gambar/icon.png" alt="Submit" width="48" height="48"><br><br>
+
+<label for="myfile">Pilih file:</label><br>
+<input type="file" id="myfile" name="myfile"><br><br>
+
+<input type="hidden" id="custid" name="custid" value="3487">
+
+<p>
+Kesimpulan: 
+Input type image berfungsi sebagai tombol submit berbentuk gambar. 
+Input type file digunakan untuk mengunggah file dari komputer. 
+Input type hidden menyimpan data yang tidak ditampilkan kepada pengguna tetapi tetap dikirim saat form disubmit.
+</p>
+
+<hr>
+
+<h3>Uji coba 7</h3>
+
+<label for="quantity">Quantity (between 1 and 5):</label><br>
+<input type="number" id="quantity" name="quantity" min="1" max="10"><br><br>
+
+<label for="vol">Volume (between 0 and 50):</label><br>
+<input type="range" id="vol" name="vol" min="0" max="50"><br>
+
+<p>
+Kesimpulan: 
+Input type number membatasi angka sesuai nilai min dan max. 
+Input type range menampilkan slider untuk memilih nilai dalam rentang tertentu. 
+Jika nilai min diubah (misalnya -50), maka pengguna bisa memilih nilai yang lebih kecil sesuai batas baru.
+</p>
+
+<hr>
+
+<h3>Uji coba 8</h3>
+
+<label for="homepage">Add your homepage:</label><br>
+<input type="url" id="homepage" name="homepage"><br><br>
+
+<label for="gsearch">Search Google:</label><br>
+<input type="search" id="gsearch" name="gsearch"><br><br>
+
+<label for="ph">Enter your phone number:</label><br>
+<input type="tel" id="ph" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+
+<p>
+Kesimpulan: 
+Input type url digunakan untuk memasukkan alamat website dengan validasi format URL. 
+Input type search digunakan untuk pencarian. 
+Input type tel digunakan untuk nomor telepon dan dapat diberi pola (pattern) agar format sesuai.
+</p>
+
+<hr>
+
+<h3>Uji coba 9</h3>
+
+<label for="appt">Select a time:</label><br>
+<input type="time" id="appt" name="appt"><br><br>
+
+<label for="week">Select a week:</label><br>
+<input type="week" id="week" name="week"><br>
+
+<p>
+Kesimpulan: 
+Input type time digunakan untuk memilih waktu (jam dan menit). 
+Input type week digunakan untuk memilih minggu dalam satu tahun. 
+Dukungan tampilan bisa berbeda di setiap browser, ada yang menampilkan picker khusus, ada juga yang hanya input biasa.
+</p>

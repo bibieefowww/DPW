@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>PENDAFTARAN</title>
+    <link rel="icon" type="image/png" href="omakkk.jpg" sizes="16x16">
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan 2.3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="header">
+    <h1>Form Pendaftaran Mahasiswa Baru</h1>
+</div>
+
+<div id="main">
+
+    <div id="link">
+        <ul>
+        </ul>
+    </div>
+
+    <div id="content">
+
+        <form method="post" action="proses.php">
+
+            Nama Lengkap:<br>
+            <input type="text" name="nama"><br><br>
+
+            Tempat, Tanggal Lahir:<br>
+            <input type="text" name="tempat">
+            <input type="date" name="tgl_lahir"><br><br>
+
+            Agama:<br>
+            <select name="agama">
+                <option>-PILIH-</option>
+                <option>Islam</option>
+                <option>Kristen</option>
+                <option>Katolik</option>
+                <option>Hindu</option>
+                <option>Budha</option>
+                <option>Konghucu</option>
+            </select><br><br>
+
+            Jenis Kelamin:<br>
+            <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+            <input type="radio" name="jk" value="Perempuan"> Perempuan<br><br>
+
+            No. Ijazah SMA/MA:<br>
+            <input type="text" name="ijazah"><br><br>
+
+            Foto (maks 20 KB):<br>
+            <input type="file" name="foto"><br><br>
+
+            Nama Ayah:<br>
+            <input type="text" name="ayah"><br><br>
+
+            Nama Ibu:<br>
+            <input type="text" name="ibu"><br><br>
+
+            Alamat Rumah:<br>
+            <textarea name="alamat_rumah" rows="4" cols="40"></textarea><br><br>
+
+            No. Telp:<br>
+            <input type="text" name="telp"><br><br>
+
+            Nama Sekolah Asal:<br>
+            <input type="text" name="sekolah"><br><br>
+
+            Alamat Sekolah Asal:<br>
+            <textarea name="alamat_sekolah" rows="4" cols="40"></textarea><br><br>
+
+            Jurusan Dipilih:<br>
+            <select name="jurusan">
+                <option>-PILIH-</option>
+                <option>Komputerisasi Akuntansi</option>
+                <option>Administrasi Bisnis</option>
+                <option>Teknik Komputer Kontrol</option>
+                <option>Teknik Listrik</option>
+                <option>Mesin Otomotif</option>
+                <option>Perkeretaapian</option>
+                <option>Teknologi Informasi</option>
+                <option>Akuntansi</option>
+            </select><br><br>
+
+            Tahu informasi ini dari:<br>
+            <input type="checkbox" name="info[]" value="Koran"> Koran
+            <input type="checkbox" name="info[]" value="Website"> Website
+            <input type="checkbox" name="info[]" value="Televisi"> Televisi
+            <input type="checkbox" name="info[]" value="Radio"> Radio
+            <input type="checkbox" name="info[]" value="Teman"> Teman<br><br>
+
+            <input type="submit" value="DAFTAR">
+            <input type="reset" value="BATAL">
+
+        </form>
+
+    </div>
+
+</div>
+
+<div id="footer">
+    <i>copyright@bbiwbe</i>
+</div>
+
+</body>
+</html>
