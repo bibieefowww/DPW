@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+
+    <style>
+        div {
+            border: 1px solid;
+            margin: 0 auto;
+            height: 100px;
+            width: 500px;
+            background: skyblue;
+            padding: 10px;
+        }
+
+        span {
+            display: block;
+            background: red;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        Ini adalah elemen pertama menggunakan DIV
+    </div>
+
+    <div>
+        Ini DIV di dalam DIV namun membuat elemen blok baru
+        <div>Ini elemen div di dalam div</div>
+    </div>
+
+    <div>
+        Ini SPAN di dalam DIV tidak membuat elemen blok
+        <span>Ini elemen span di dalam div</span>
+    </div>
+
+</body>
+</html>

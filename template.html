@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Template CSS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eee;
+            margin: 0;
+        }
+
+        .header {
+            background: linear-gradient(to right, blue, purple);
+            color: yellow;
+            padding: 20px;
+        }
+
+        .header p {
+            color: white;
+            margin: 5px 0 0;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .menu {
+            width: 200px;
+            border: 2px dashed #999;
+            padding: 15px;
+            background: #f9f9f9;
+        }
+
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+        }
+
+        .menu a:hover {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .content {
+            flex: 1;
+            text-align: center;
+        }
+
+        .content img {
+            width: 120px;
+        }
+
+        .content h2 {
+            margin: 10px 0 0;
+        }
+
+        .content p {
+            color: red;
+            max-width: 400px;
+            margin: 10px auto;
+        }
+
+        .footer {
+            background: #a3b7c9;
+            padding: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Halo CSS !</h1>
+        <p>Ini adalah website CSS saya</p>
+    </div>
+
+    <div class="container">
+
+        <div class="menu">
+            <a href="#">Menu 1</a>
+            <a href="#">Menu 2</a>
+            <a href="#">Menu 3</a>
+            <a href="#">Menu 4</a>
+            <a href="#">Menu 5</a>
+            <a href="#"><b>Menu 6</b></a>
+        </div>
+
+        <div class="content">
+            <img src="Politeknik_Negeri_Madiun.webp" alt="Logo TI">
+            <h2>TI</h2>
+            <p>Politeknik Negeri Madiun</p>
+
+            <p>
+                Mewujudkan pendidikan tinggi vokasi dalam bidang Teknologi Informasi 
+                dan penerapannya yang berkualitas, inovatif dan berdaya saing Nasional.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Bintang Nur Aini | 253307012 | TI-25
+    </div>
+
+</body>
+</html>

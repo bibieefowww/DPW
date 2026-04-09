@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinator Selector</title>
+
+    <style>
+        div p {
+            color: red;
+        }
+
+        /* no 2 : child selector */
+        div > p {
+            background-color: yellow;
+        }
+
+        div + p {
+            background-color: darkgray;
+        }
+
+        div ~ p {
+            color: cyan;
+        }
+
+        p {
+            padding: 8px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p>
+            This is a paragraph. 
+            Kesimpulan: Selector no 1 (div p) memilih semua paragraf yang berada di dalam div.
+        </p>
+
+        <p>
+            This is a paragraph. 
+            Kesimpulan: Selector no 2 (div > p) hanya memilih paragraf yang merupakan anak langsung dari div.
+        </p>
+    </div>
+
+    <p>
+        This is a paragraph. 
+        Kesimpulan: Selector no 3 (div + p) memilih paragraf pertama setelah div.
+    </p>
+
+    <p>
+        This is a paragraph. 
+        Kesimpulan: Selector no 4 (div ~ p) memilih semua paragraf setelah div yang berada pada level yang sama.
+    </p>
+
+</body>
+</html>
