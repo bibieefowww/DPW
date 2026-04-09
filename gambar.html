@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Gambar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 25%;
+            height: 100%;
+            background: #ddd;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 8px 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        article {
+            float: left;
+            width: 75%;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>LUCU</h2>
+</header>
+
+<section>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h3>CUTIE PICTURE</h3>
+
+        <div class="gallery">
+            <img src="garden.jpg" alt="">
+            <img src="guguk.jpg" alt="">
+            <img src="flower.jpg" alt="">
+            <img src="pastel.jpg" alt="">
+            <img src="sinchan.jpg" alt="">
+            <img src="toko.jpg" alt="">
+        </div>
+
+        <p>
+        Kesimpulan: Tag gambar digunakan untuk menampilkan visual pada halaman web. 
+        Dengan bantuan CSS seperti grid, gambar dapat ditampilkan dalam bentuk galeri yang rapi dan responsif.
+        </p>
+    </article>
+
+</section>
+
+<footer>
+    <p>Footer</p>
+</footer>
+
+</body>
+</html>

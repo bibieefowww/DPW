@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pendaftaran Pertemuan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 25%;
+            background: #ddd;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 8px 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        article {
+            float: left;
+            width: 75%;
+            padding: 20px;
+            background-color: #ffffff;
+            min-height: 100vh;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .keterangan {
+            background: #f9f9f9;
+            border-left: 4px solid #666;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        .form-row {
+            margin-bottom: 12px;
+        }
+
+        .form-row label {
+            display: inline-block;
+            width: 180px;
+            vertical-align: top;
+        }
+
+        .form-row input,
+        .form-row select {
+            width: 220px;
+            padding: 6px;
+        }
+
+        .form-row input[type="range"] {
+            width: 220px;
+            padding: 0;
+        }
+
+        .nilai-range {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .submit-btn {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .form-row label,
+            .form-row input,
+            .form-row select {
+                display: block;
+                width: 100%;
+            }
+
+            .form-row label {
+                margin-bottom: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Judul Website</h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Form Penjadwal Pertemuan</h1>
+
+        <div class="keterangan">
+            <p><b>Ketentuan:</b></p>
+            <ul>
+                <li>No. Telepon harus menggunakan format Indonesia: XXXX-XXXXXX.</li>
+                <li>Email harus sesuai format, misalnya: nama@domain.com.</li>
+                <li>Tanggal lahir antara 1 Januari 1987 sampai 1 Januari 1993.</li>
+                <li>Tingkat kepentingan antara 0 sampai 10.</li>
+                <li>Tanggal pertemuan harus di atas hari ini.</li>
+                <li>Jam pertemuan antara 17.00 sampai 21.00 WIB.</li>
+            </ul>
+        </div>
+
+        <form>
+            <fieldset>
+                <legend>Informasi Pribadi</legend>
+
+                <div class="form-row">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="telepon">No. Telepon</label>
+                    <input type="tel" id="telepon" name="telepon" pattern="[0-9]{4}-[0-9]{6}" placeholder="0812-123456" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" name="email" placeholder="nama@domain.com" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="lahir">Tanggal Lahir</label>
+                    <input type="date" id="lahir" name="lahir" min="1987-01-01" max="1993-01-01" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Permintaan Pertemuan</legend>
+
+                <div class="form-row">
+                    <label for="tujuan">Tujuan Pertemuan</label>
+                    <input type="text" id="tujuan" name="tujuan" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="kepentingan">Tingkat Kepentingan Pertemuan</label>
+                    <input type="range" id="kepentingan" name="kepentingan" min="0" max="10" value="5" oninput="nilaiKepentingan.textContent=this.value">
+                    <span id="nilaiKepentingan" class="nilai-range">5</span>
+                </div>
+
+                <div class="form-row">
+                    <label for="tanggal">Tanggal</label>
+                    <input type="date" id="tanggal" name="tanggal" min="2026-04-09" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="waktu">Waktu</label>
+                    <input type="time" id="waktu" name="waktu" min="17:00" max="21:00" required>
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+
+        <p>
+            <b>Kesimpulan:</b> Form HTML dapat memanfaatkan berbagai tipe input seperti
+            <i>email</i>, <i>tel</i>, <i>date</i>, <i>time</i>, dan <i>range</i> untuk
+            membatasi masukan pengguna sesuai kebutuhan. Dengan validasi ini, data yang
+            diinput menjadi lebih terstruktur, akurat, dan sesuai ketentuan.
+        </p>
+    </article>
+</section>
+
+<footer>
+    <p>bbiwbe</p>
+</footer>
+
+<script>
+    const tanggalInput = document.getElementById("tanggal");
+    const hariIni = new Date();
+    hariIni.setDate(hariIni.getDate() + 1);
+
+    const tahun = hariIni.getFullYear();
+    const bulan = String(hariIni.getMonth() + 1).padStart(2, "0");
+    const tanggal = String(hariIni.getDate()).padStart(2, "0");
+
+    tanggalInput.min = `${tahun}-${bulan}-${tanggal}`;
+</script>
+
+</body>
+</html>
