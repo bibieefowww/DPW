@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kumpulan Program JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #2196F3;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        button, input[type="button"] {
+            padding: 8px 15px;
+            margin-top: 10px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1976D2;
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 8px;
+            width: 200px;
+            margin-top: 5px;
+        }
+    </style>
+
+    <script>
+        function myFunction() {
+            let txt;
+            if (confirm("Apakah Anda akan logout?")) {
+                txt = "Anda mengklik OK";
+            } else {
+                txt = "Anda mengklik Cancel";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        function cekNama(form) {
+            if (form.elements[0].value == "") {
+                alert("Nama harus dimasukkan");
+                form.nama.focus();
+                return false;
+            }
+            alert("Terima kasih, " + form.elements[0].value);
+            return true;
+        }
+
+        function info() {
+            for (let i = 0; i < 4; i++) {
+                if (document.formku.radiomusik[i].checked) {
+                    document.formku.fieldmusik.value =
+                        document.formku.radiomusik[i].value;
+                }
+            }
+        }
+
+        function cekPassword() {
+            if (document.forms[0].password_1.value != document.forms[0].password_2.value) {
+                alert("Dua password tidak sama!");
+            } else {
+                alert("Password sama!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>Kumpulan Program JavaScript</h1>
+
+<div class="box">
+    <h3>1. Program Alert</h3>
+    <button onclick="alert('Hallo!')">Klik Alert</button>
+</div>
+
+<div class="box">
+    <h3>2. Program Input Data</h3>
+    <button onclick="
+        let nama = prompt('Siapa nama Anda?');
+        document.getElementById('hasil').innerHTML = 'Hai, ' + nama;
+    ">Input Nama</button>
+    <p id="hasil"></p>
+</div>
+
+<div class="box">
+    <h3>3. Program Confirm Box</h3>
+    <button onclick="myFunction()">Klik Disini</button>
+    <p id="demo"></p>
+</div>
+
+<div class="box">
+    <h3>4. Program Validasi Isian</h3>
+    <form name="formku">
+        Nama: <input type="text" name="nama"><br>
+        <input type="button" value="Kirim" onclick="cekNama(this.form)">
+    </form>
+</div>
+
+<div class="box">
+    <h3>5. Program Radio Box</h3>
+    <form name="formku">
+        Pilih musik favorit:<br>
+        <input type="radio" name="radiomusik" value="Jazz" onclick="info()"> Jazz<br>
+        <input type="radio" name="radiomusik" value="Keroncong" onclick="info()"> Keroncong<br>
+        <input type="radio" name="radiomusik" value="Dangdut" onclick="info()"> Dangdut<br>
+        <input type="radio" name="radiomusik" value="Lainnya" onclick="info()"> Lainnya<br><br>
+
+        Info:
+        <input type="text" name="fieldmusik" size="30">
+    </form>
+</div>
+
+<div class="box">
+    <h3>6. Program Verifikasi Password</h3>
+    <form>
+        Password: <input type="password" name="password_1"><br><br>
+        Ulangi Password: <input type="password" name="password_2"><br><br>
+        <input type="button" value="Proses" onclick="cekPassword()">
+    </form>
+</div>
+
+</body>
+</html>
