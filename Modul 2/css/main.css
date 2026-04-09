@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#main {
+    display: flex;
+}
+
+#link {
+    width: 25%;
+    background-color: #d9edf7;
+    padding: 15px;
+}
+
+#link ul {
+    list-style: none;
+    padding: 0;
+}
+
+#link li {
+    margin: 10px 0;
+}
+
+#content {
+    width: 75%;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+#footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jam Real Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .jam-box {
+            display: inline-block;
+            background: white;
+            padding: 30px 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #2196F3;
+        }
+
+        #waktu {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+
+    <script>
+        function tampilWaktu() {
+            const sekarang = new Date();
+
+            const hari = sekarang.getDate();
+            const bulan = sekarang.getMonth() + 1;
+            const tahun = sekarang.getFullYear();
+
+            let jam = sekarang.getHours();
+            let menit = sekarang.getMinutes();
+            let detik = sekarang.getSeconds();
+
+            jam = jam < 10 ? "0" + jam : jam;
+            menit = menit < 10 ? "0" + menit : menit;
+            detik = detik < 10 ? "0" + detik : detik;
+
+            document.getElementById("waktu").innerHTML =
+                hari + "/" + bulan + "/" + tahun + " - " +
+                jam + ":" + menit + ":" + detik;
+        }
+
+        setInterval(tampilWaktu, 1000);
+    </script>
+</head>
+<body onload="tampilWaktu()">
+    <div class="jam-box">
+        <h1>Jam Real Time</h1>
+        <div id="waktu"></div>
+    </div>
+</body>
+</html>

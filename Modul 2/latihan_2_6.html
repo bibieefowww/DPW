@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>IMAGE</title>
+    <link rel="icon" type="image/png" href="wowmoney.jpg" sizes="16x16">
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan 2.6 - Image Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="header">
+    <h1>Uji Coba Image Map</h1>
+</div>
+
+<div id="main">
+
+    <div id="link">
+        <ul>
+            <li><a href="#">petagambar</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+
+        <h3>Klik bagian tertentu pada gambar:</h3>
+
+        <img src="paww.png" alt="Workplace" usemap="#petagambar">
+
+        <map name="petagambar">
+            <area shape="rect" coords="34,44,270,350" alt="Computer"
+                  href="https://en.wikipedia.org/wiki/Computer">
+
+            <area shape="rect" coords="290,172,333,250" alt="Phone"
+                  href="https://en.wikipedia.org/wiki/Telephone">
+
+            <area shape="circle" coords="337,300,44" alt="Coffee"
+                  href="https://en.wikipedia.org/wiki/Coffee">
+        </map>
+
+        <p>
+        Kesimpulan: Tag HTML &lt;map&gt; digunakan untuk membuat peta gambar (image map),
+        yaitu gambar yang memiliki beberapa area yang dapat diklik. 
+        Setiap area ditentukan dengan tag &lt;area&gt; menggunakan atribut shape dan coords.
+        </p>
+
+    </div>
+
+</div>
+
+<div id="footer">
+    <i>copyright@bbiwbe</i>
+</div>
+
+</body>
+</html>

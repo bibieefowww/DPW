@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Dialog Progressbar</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            background-color: #f4f6f9;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #progressbar {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="downloadBtn">Mulai Download</button>
+
+    <div id="dialog" title="Proses Download" style="display:none;">
+        <p>Sedang mendownload file, mohon tunggu...</p>
+        <div id="progressbar"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#downloadBtn").click(function() {
+                $("#dialog").dialog({
+                    modal: true
+                });
+
+                $("#progressbar").progressbar({
+                    value: 0
+                });
+
+                let nilai = 0;
+                let proses = setInterval(function() {
+                    nilai += 10;
+                    $("#progressbar").progressbar("value", nilai);
+
+                    if (nilai >= 100) {
+                        clearInterval(proses);
+                        $("#dialog p").html("Download selesai!");
+                    }
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
