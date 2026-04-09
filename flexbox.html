@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Flex Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f6f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #1f4e79;
+        }
+
+        p {
+            background-color: #ffffff;
+            padding: 10px;
+            border-left: 5px solid #1f4e79;
+        }
+
+        .wadah_flex {
+            display: flex;
+            background-color: #ddd;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .wadah_flex div {
+            background-color: lightblue;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .skenario3 {
+            flex-direction: row;
+        }
+
+        .skenario4 {
+            flex-wrap: wrap;
+        }
+
+        .skenario5 {
+            flex-flow: row wrap;
+        }
+
+        .skenario6 {
+            justify-content: center;
+        }
+
+        .box-besar {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Belajar Flex Box</h1>
+
+    <h2>Skenario 1</h2>
+    <div class="wadah_flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p>Kesimpulan skenario 1 adalah: Elemen di dalam flex container akan tersusun sejajar secara horizontal (row) secara default.</p>
+
+    <h2>Skenario 2</h2>
+    <div class="wadah_flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p>Kesimpulan skenario 2 adalah: Setiap item di dalam flex container dapat diberi warna, margin, padding, dan ukuran font agar tampil lebih jelas dan menarik.</p>
+
+    <h2>Skenario 3</h2>
+    <div class="wadah_flex skenario3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <p>Kesimpulan skenario 3 adalah: Property <b>flex-direction</b> digunakan untuk mengatur arah susunan item, misalnya horizontal, vertikal, atau kebalikannya.</p>
+
+    <h2>Skenario 4</h2>
+    <div class="wadah_flex skenario4">
+        <div class="box-besar">1</div>
+        <div class="box-besar">2</div>
+        <div class="box-besar">3</div>
+        <div class="box-besar">4</div>
+        <div class="box-besar">5</div>
+        <div class="box-besar">6</div>
+        <div class="box-besar">7</div>
+        <div class="box-besar">8</div>
+        <div class="box-besar">9</div>
+        <div class="box-besar">10</div>
+        <div class="box-besar">11</div>
+        <div class="box-besar">12</div>
+    </div>
+    <p>Kesimpulan skenario 4 adalah: Property <b>flex-wrap</b> membuat item turun ke baris berikutnya jika ruang dalam container tidak cukup.</p>
+
+    <h2>Skenario 5</h2>
+    <div class="wadah_flex skenario5">
+        <div class="box-besar">1</div>
+        <div class="box-besar">2</div>
+        <div class="box-besar">3</div>
+        <div class="box-besar">4</div>
+        <div class="box-besar">5</div>
+        <div class="box-besar">6</div>
+        <div class="box-besar">7</div>
+        <div class="box-besar">8</div>
+        <div class="box-besar">9</div>
+        <div class="box-besar">10</div>
+        <div class="box-besar">11</div>
+        <div class="box-besar">12</div>
+    </div>
+    <p>Kesimpulan skenario 5 adalah: Property <b>flex-flow</b> merupakan gabungan dari <b>flex-direction</b> dan <b>flex-wrap</b>.</p>
+
+    <h2>Skenario 6</h2>
+    <div class="wadah_flex skenario6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <p>Kesimpulan skenario 6 adalah: Property <b>justify-content</b> digunakan untuk mengatur posisi item secara horizontal di dalam flex container.</p>
+
+</body>
+</html>

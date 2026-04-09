@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Grid</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f6f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #1f4e79;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            grid-template-columns: auto auto auto auto;
+            padding: 10px;
+        }
+
+        .item1-s1 {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+
+            grid-row: 1 / 4;
+        }
+
+        .item1-s2 {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+
+            grid-column: 1 / 4;
+        }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .kesimpulan {
+            margin-top: 10px;
+            padding: 10px;
+            background: white;
+            border-left: 5px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Belajar Grid Layout 3</h1>
+
+<h2>Skenario 1 (grid-row)</h2>
+<div class="grid-container">
+    <div class="item1-s1">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+</div>
+
+<div class="kesimpulan">
+    Kesimpulan skenario 1 adalah: Properti <b>grid-row</b> digunakan untuk membuat elemen memanjang secara vertikal (melewati beberapa baris).
+</div>
+
+<h2>Skenario 2 (grid-column)</h2>
+<div class="grid-container">
+    <div class="item1-s2">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+</div>
+
+<div class="kesimpulan">
+    Kesimpulan skenario 2 adalah: Properti <b>grid-column</b> digunakan untuk membuat elemen memanjang secara horizontal (melewati beberapa kolom).
+</div>
+
+</body>
+</html>
