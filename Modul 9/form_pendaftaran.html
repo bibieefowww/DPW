@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pendaftaran</title>
+</head>
+<body>
+
+<form action="proses_pendaftaran.php" method="POST">
+
+    Nim:
+    <input type="text" name="nim">
+    <br><br>
+
+    Nama Lengkap:
+    <input type="text" name="nama">
+    <br><br>
+
+    E-mail:
+    <input type="email" name="email">
+    <br><br>
+
+    Tempat, Tanggal Lahir:
+    <input type="text" name="tempat">
+    <input type="date" name="ttl">
+    <br><br>
+
+    Alamat:
+    <br>
+    <textarea name="alamat" rows="4" cols="30"></textarea>
+    <br><br>
+
+    Gender:
+    <input type="radio" name="jk" value="Laki-Laki"> Laki-Laki
+    <input type="radio" name="jk" value="Perempuan"> Perempuan
+    <br><br>
+
+    <input type="submit" value="Kirim">
+
+</form>
+
+<!--
+KESIMPULAN
+
+1. Method POST digunakan untuk mengirim data form ke server.
+2. Data yang dikirim menggunakan POST tidak terlihat pada URL browser.
+3. Method GET menampilkan data yang dikirim pada URL.
+4. POST lebih cocok digunakan untuk form pendaftaran, login, dan pengiriman data penting.
+5. GET lebih cocok digunakan untuk pencarian atau data yang tidak bersifat rahasia.
+-->
+
+</body>
+</html>
